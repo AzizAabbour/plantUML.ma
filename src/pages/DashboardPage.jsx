@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Link, useNavigate } from 'react'
+import { Link, useNavigate } from 'react-router'
 import { Plus, Search, MoreVertical, Copy, Trash2, Edit3, Share2, FolderPlus, Clock } from 'lucide-react'
 import { useProjects } from '../context/ProjectContext'
 import { useAuth } from '../context/AuthContext'

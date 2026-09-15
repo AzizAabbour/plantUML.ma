@@ -1,13 +1,13 @@
-import { useNavigate } from 'react'
+import { useNavigate } from 'react-router'
 import {
   Undo, Redo, ZoomIn, ZoomOut, Maximize2, Download, Users, Share2, Save, Check, ArrowLeft, Image, FileCode, FileJson
 } from 'lucide-react'
-import { useEditor } from '../context/EditorContext'
-import Button from '../components/common/Button'
-import Dropdown, { DropdownItem } from '../components/common/Dropdown'
-import { useToast } from '../components/common/Toast'
-import Avatar, { AvatarGroup } from '../components/common/Avatar'
-import { useAuth } from '../context/AuthContext'
+import { useEditor } from '../../context/EditorContext'
+import Button from '../common/Button'
+import Dropdown, { DropdownItem } from '../common/Dropdown'
+import { useToast } from '../common/Toast'
+import Avatar, { AvatarGroup } from '../common/Avatar'
+import { useAuth } from '../../context/AuthContext'
 
 export default function Toolbar({ projectName, onProjectNameChange, onExport }) {
   const navigate = useNavigate()

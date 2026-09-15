@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { useParams, useNavigate } from 'react'
+import { useParams, useNavigate } from 'react-router'
 import { useProjects } from '../context/ProjectContext'
 import { EditorProvider, useEditor } from '../context/EditorContext'
 import Toolbar from '../components/editor/Toolbar'
@@ -10,6 +10,7 @@ import StatusBar from '../components/editor/StatusBar'
 import CollaborationDrawer from '../components/editor/CollaborationDrawer'
 import { exportToJSON, exportToSVG, exportToPNG } from '../services/exportService'
 import { useToast } from '../components/common/Toast'
+import '../styles/editor.css'
 
 function InnerEditor({ project }) {
   const { updateProject } = useProjects()

@@ -109,7 +109,7 @@ export default function LeftSidebar() {
                     borderRadius: '4px',
                     display: 'flex',
                     alignItems: 'center',
-                    justify-content: 'space-between'
+                    justifyContent: 'space-between'
                   }}
                 >
                   <span>{n.data?.name || n.type || `Node ${i+1}`}</span>

@@ -12,8 +12,29 @@
 
 .uml-node.selected {
   border-color: #f39c12 !important;
-  box-shadow: 0 0 0 3px rgba(243, 156, 18, 0.25) !important;
+  box-shadow: 0 0 0 3px rgba(243, 156, 18, 0.3) !important;
 }
+
+/* React Flow Connection Handles in Orange */
+.react-flow__handle {
+  width: 9px !important;
+  height: 9px !important;
+  background: #f39c12 !important;
+  border: 1.5px solid #ffffff !important;
+  border-radius: 50% !important;
+  transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+.react-flow__handle:hover {
+  background: #e67e22 !important;
+  transform: scale(1.3) !important;
+}
+
+.react-flow__edge.selected .react-flow__edge-path {
+  stroke: #f39c12 !important;
+  stroke-width: 2.5px !important;
+}
+
 
 /* Class Node */
 .class-header {

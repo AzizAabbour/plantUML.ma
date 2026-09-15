@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { useNavigate } from 'react'
+import { useNavigate } from 'react-router'
 import { LayoutGrid, ArrowRight, Sparkles } from 'lucide-react'
 import { mockTemplates, DIAGRAM_TYPES } from '../data/mockProjects'
 import { useProjects } from '../context/ProjectContext'
