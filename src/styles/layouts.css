@@ -1,0 +1,120 @@
+.app-layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.app-header {
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--space-6);
+  background: var(--color-bg);
+  border-bottom: 1px solid var(--color-border-light);
+  position: sticky;
+  top: 0;
+  z-index: var(--z-sticky);
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-lg);
+  font-weight: var(--font-bold);
+  color: var(--color-text);
+  text-decoration: none;
+}
+.logo-icon {
+  width: 28px;
+  height: 28px;
+  background: var(--color-primary);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+.logo span {
+  color: var(--color-primary);
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.header-nav a {
+  padding: var(--space-2) var(--space-3);
+  font-size: var(--text-base);
+  font-weight: var(--font-medium);
+  color: var(--color-text-secondary);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+}
+.header-nav a:hover,
+.header-nav a.active {
+  color: var(--color-text);
+  background: var(--color-surface);
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.app-content {
+  flex: 1;
+}
+
+/* Auth Layout */
+.auth-layout {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-surface);
+  padding: var(--space-6);
+}
+
+.auth-card {
+  background: var(--color-bg);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  padding: var(--space-10);
+  width: 100%;
+  max-width: 420px;
+  animation: fadeInUp var(--transition-slow) both;
+}
+
+.auth-header {
+  text-align: center;
+  margin-bottom: var(--space-8);
+}
+.auth-header h1 {
+  font-size: var(--text-2xl);
+  margin-bottom: var(--space-2);
+}
+.auth-header p {
+  color: var(--color-text-secondary);
+  font-size: var(--text-md);
+}
+
+/* Editor Layout */
+.editor-layout {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: var(--color-surface);
+}

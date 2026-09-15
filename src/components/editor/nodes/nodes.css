@@ -1,0 +1,181 @@
+.uml-node {
+  background: #ffffff;
+  border: 1.5px solid #2c3e50;
+  border-radius: 4px;
+  font-family: var(--font-family);
+  font-size: 12px;
+  color: #2c3e50;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  user-select: none;
+  min-width: 140px;
+}
+
+.uml-node.selected {
+  border-color: #f39c12 !important;
+  box-shadow: 0 0 0 3px rgba(243, 156, 18, 0.25) !important;
+}
+
+/* Class Node */
+.class-header {
+  padding: 6px 10px;
+  background: #fff8ed;
+  border-bottom: 1px solid #2c3e50;
+  text-align: center;
+}
+
+.class-stereotype {
+  font-size: 10px;
+  color: #7f8c8d;
+  font-style: italic;
+}
+
+.class-name {
+  font-weight: 700;
+  font-size: 13px;
+  color: #2c3e50;
+}
+
+.class-section {
+  padding: 6px 10px;
+  border-bottom: 1px solid #2c3e50;
+}
+
+.class-section:last-child {
+  border-bottom: none;
+}
+
+.class-item {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+
+/* UseCase & Actor */
+.usecase-ellipse {
+  width: 140px;
+  height: 70px;
+  background: #ffffff;
+  border: 1.5px solid #2c3e50;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 8px 14px;
+  font-weight: 600;
+}
+
+.actor-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.actor-name {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* Activity Nodes */
+.action-box {
+  padding: 10px 18px;
+  background: #ffffff;
+  border: 1.5px solid #2c3e50;
+  border-radius: 16px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.decision-box {
+  width: 44px;
+  height: 44px;
+  background: #ffffff;
+  border: 1.5px solid #2c3e50;
+  transform: rotate(45deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.initial-node {
+  width: 24px;
+  height: 24px;
+  background: #2c3e50;
+  border-radius: 50%;
+}
+
+.final-node {
+  width: 26px;
+  height: 26px;
+  border: 2px solid #2c3e50;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+}
+
+.final-node-inner {
+  width: 16px;
+  height: 16px;
+  background: #2c3e50;
+  border-radius: 50%;
+}
+
+/* State & Component & Deployment */
+.state-box {
+  padding: 8px 16px;
+  background: #ffffff;
+  border: 1.5px solid #2c3e50;
+  border-radius: 8px;
+  min-width: 120px;
+  text-align: center;
+}
+
+.component-box {
+  padding: 12px 20px;
+  background: #ffffff;
+  border: 1.5px solid #2c3e50;
+  border-radius: 4px;
+  min-width: 150px;
+  position: relative;
+}
+
+.component-icon-badge {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  display: flex;
+  gap: 2px;
+}
+
+.deployment-node {
+  padding: 14px 22px;
+  background: #ffffff;
+  border: 1.5px solid #2c3e50;
+  box-shadow: 4px 4px 0px #2c3e50;
+  border-radius: 2px;
+  min-width: 160px;
+}
+
+.sequence-lifeline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lifeline-header {
+  padding: 8px 16px;
+  background: #ffffff;
+  border: 1.5px solid #2c3e50;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.lifeline-line {
+  width: 2px;
+  height: 200px;
+  background: repeating-linear-gradient(to bottom, #2c3e50 0, #2c3e50 6px, transparent 6px, transparent 12px);
+}

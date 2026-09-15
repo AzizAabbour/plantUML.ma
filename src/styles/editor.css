@@ -1,0 +1,208 @@
+.editor-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background: var(--color-bg);
+}
+
+/* Top Toolbar */
+.editor-toolbar {
+  height: var(--toolbar-height);
+  background: var(--color-bg);
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--space-4);
+  z-index: var(--z-toolbar);
+  user-select: none;
+}
+
+.toolbar-group {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.toolbar-divider {
+  width: 1px;
+  height: 20px;
+  background: var(--color-border);
+  margin: 0 var(--space-1);
+}
+
+.project-name-input {
+  font-size: var(--text-md);
+  font-weight: var(--font-semibold);
+  color: var(--color-text);
+  border: 1px solid transparent;
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+  background: transparent;
+}
+.project-name-input:hover {
+  border-color: var(--color-border);
+}
+.project-name-input:focus {
+  outline: none;
+  background: white;
+  border-color: var(--color-primary);
+}
+
+.save-indicator {
+  font-size: var(--text-xs);
+  color: var(--color-text-tertiary);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.save-indicator.saved { color: var(--color-success); }
+.save-indicator.saving { color: var(--color-warning); }
+
+/* Main Workspace */
+.editor-main {
+  flex: 1;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Left Sidebar */
+.editor-sidebar {
+  width: var(--sidebar-width);
+  background: var(--color-surface);
+  border-right: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  z-index: var(--z-sidebar);
+}
+
+.sidebar-tabs {
+  display: flex;
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-bg);
+}
+
+.sidebar-tab {
+  flex: 1;
+  padding: var(--space-2) var(--space-3);
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  color: var(--color-text-secondary);
+  border-bottom: 2px solid transparent;
+  text-align: center;
+  cursor: pointer;
+}
+.sidebar-tab.active {
+  color: var(--color-primary);
+  border-bottom-color: var(--color-primary);
+  background: var(--color-surface);
+}
+
+.sidebar-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--space-4);
+}
+
+.shape-palette-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-2) var(--space-3);
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-2);
+  cursor: grab;
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  transition: all var(--transition-fast);
+}
+.shape-palette-item:hover {
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-sm);
+  color: var(--color-primary);
+}
+
+/* Canvas Wrapper */
+.canvas-wrapper {
+  flex: 1;
+  position: relative;
+  background: #ffffff;
+}
+
+/* Right Properties Panel */
+.properties-panel {
+  width: var(--properties-width);
+  background: var(--color-bg);
+  border-left: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  z-index: var(--z-sidebar);
+}
+
+.properties-header {
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 1px solid var(--color-border);
+  font-size: var(--text-md);
+  font-weight: var(--font-semibold);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.properties-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.property-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.property-group label {
+  font-size: var(--text-xs);
+  font-weight: var(--font-semibold);
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Bottom Statusbar */
+.editor-statusbar {
+  height: var(--statusbar-height);
+  background: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--space-4);
+  font-size: var(--text-xs);
+  color: var(--color-text-secondary);
+  z-index: var(--z-sticky);
+}
+
+/* Collaboration Slide-out */
+.collab-drawer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 320px;
+  background: var(--color-bg);
+  border-left: 1px solid var(--color-border);
+  box-shadow: var(--shadow-xl);
+  z-index: calc(var(--z-sidebar) + 10);
+  display: flex;
+  flex-direction: column;
+  animation: slideInRight var(--transition-panel) both;
+}
